@@ -19,9 +19,9 @@ export class LineChartComponent implements OnInit {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Year';
+  // xAxisLabel = 'Year';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
+  // yAxisLabel = 'Population';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
