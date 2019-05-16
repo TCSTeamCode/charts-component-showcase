@@ -8,6 +8,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
 import { LineChartComponent} from './line-chart/line-chart.component';
 import { BarChartComponent} from './bar-chart/bar-chart.component';
+import { PieChartComponent} from './pie-chart/pie-chart.component';
 
 @NgModule({
   imports:      [ 
@@ -18,7 +19,7 @@ import { BarChartComponent} from './bar-chart/bar-chart.component';
     NgxChartsModule,
     BrowserAnimationsModule
 ],
-  declarations: [ AppComponent, LineChartComponent, BarChartComponent ],
+  declarations: [ AppComponent, LineChartComponent, BarChartComponent, PieChartComponent ],
   exports: [FormsModule  ],
   bootstrap:    [ AppComponent ]
 })
