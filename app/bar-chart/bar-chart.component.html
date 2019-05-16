@@ -1,0 +1,98 @@
+<div class="row m-3 d-flex justify-content-around">
+  <mat-checkbox [(ngModel)]="isGradient">Gradient Bar</mat-checkbox>
+  <mat-checkbox [(ngModel)]="hideLegend">Hide Legend</mat-checkbox>
+  <mat-form-field>
+    <mat-label>Legend Position</mat-label>
+    <mat-select [(value)]="legendPosition">
+      <mat-option value="right">Right</mat-option>
+      <mat-option value="bottom">Bottom</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Themes</mat-label>
+    <mat-select [ngModel]="selectedColorScheme" (ngModelChange)="setColorScheme($event)">
+      <mat-option *ngFor="let scheme of colorSets" [value]="scheme.name">{{scheme.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<div class="row m-3">
+	<div class="col">
+		<h3>Vertical Bar Chart</h3>
+		<div>
+			<ngx-charts-bar-vertical 
+        [view]="view"
+        [results]="single" 
+        [scheme]="colorScheme" 
+        [barPadding]="100"
+			  [gradient]="isGradient" 
+        [xAxis]="true" 
+        [yAxis]="true" 
+        [legendPosition]="legendPosition"
+        [legend]="!hideLegend" 
+        [legendTitle]="'Legend'" 
+        [showXAxisLabel]="true" 
+        [showYAxisLabel]="true">
+			</ngx-charts-bar-vertical>
+		</div>
+	</div>
+	<div class="col">
+		<h3>Stacked Vertical Bar Chart</h3>
+		<div>
+      <ngx-charts-bar-vertical-stacked 
+        [view]="view"
+        [results]="multi" 
+        [scheme]="colorScheme" 
+        [barPadding]="100"
+			  [gradient]="isGradient" 
+        [xAxis]="true" 
+        [yAxis]="true" 
+        [legendPosition]="legendPosition"
+        [legend]="!hideLegend" 
+        [legendTitle]="'Legend'" 
+        [showXAxisLabel]="true" 
+        [showYAxisLabel]="true">
+			</ngx-charts-bar-vertical-stacked>
+		</div>
+	</div>
+</div>
+<div class="row m-3">
+	<div class="col">
+		<h3>Horizontal Bar Chart</h3>
+		<div>
+			<ngx-charts-bar-horizontal 
+        [view]="view"
+        [results]="single" 
+        [scheme]="colorScheme" 
+        [barPadding]="100"
+			  [gradient]="isGradient" 
+        [xAxis]="true" 
+        [yAxis]="true" 
+        [legendPosition]="legendPosition"
+        [legend]="!hideLegend" 
+        [legendTitle]="'Legend'" 
+        [showXAxisLabel]="true" 
+        [showYAxisLabel]="true">
+			</ngx-charts-bar-horizontal>
+		</div>
+	</div>
+	<div class="col">
+		<h3>Stacked Horizontal Bar Chart</h3>
+		<div>
+			<ngx-charts-bar-horizontal-stacked 
+        [view]="view"
+        [results]="multi" 
+        [scheme]="colorScheme" 
+        [barPadding]="100"
+			  [gradient]="isGradient" 
+        [xAxis]="true" 
+        [yAxis]="true" 
+        [legendPosition]="legendPosition"
+        [legend]="!hideLegend" 
+        [legendTitle]="'Legend'" 
+        [showXAxisLabel]="true" 
+        [showYAxisLabel]="true">
+			</ngx-charts-bar-horizontal-stacked>
+		</div>
+	</div>
+</div>
