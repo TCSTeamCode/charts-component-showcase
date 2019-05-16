@@ -20,5 +20,25 @@
         </ngx-charts-area-chart>
       </div>
     </div>
+    <div class="col">
+      <h3>Stacked Area Chart</h3>
+      <div>
+        <ngx-charts-area-chart-stacked
+          [view]="view"
+          [animations]="true"
+          [scheme]="colorScheme"
+          [results]="multi"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          (select)="onSelect($event)">
+        </ngx-charts-area-chart-stacked>
+      </div>
+    </div>    
   </div>
 
