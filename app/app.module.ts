@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LineChartComponent} from './line-chart/line-chart.component';
 import { BarChartComponent} from './bar-chart/bar-chart.component';
 import { PieChartComponent} from './pie-chart/pie-chart.component';
+import { AreaChartComponent} from './area-chart/area-chart.component';
 
 @NgModule({
   imports:      [ 
@@ -19,7 +20,7 @@ import { PieChartComponent} from './pie-chart/pie-chart.component';
     NgxChartsModule,
     BrowserAnimationsModule
 ],
-  declarations: [ AppComponent, LineChartComponent, BarChartComponent, PieChartComponent ],
+  declarations: [ AppComponent, LineChartComponent, BarChartComponent, PieChartComponent, AreaChartComponent ],
   exports: [FormsModule  ],
   bootstrap:    [ AppComponent ]
 })
