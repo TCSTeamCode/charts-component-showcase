@@ -1,0 +1,26 @@
+<div class="row m-3 d-flex justify-content-around">
+  <mat-checkbox [(ngModel)]="explodeSlices" *ngIf="!showDoughnut">Explode Slices</mat-checkbox>
+  <mat-checkbox [(ngModel)]="showDoughnut">Doughnut Chart</mat-checkbox>
+  <mat-form-field *ngIf="showDoughnut">
+    <input matInput placeholder="Arc Width" max="1" min="0" step="0.01" type="number" value="0.25">
+  </mat-form-field>
+  <mat-checkbox [(ngModel)]="hideLabel">Toggle Label</mat-checkbox>
+</div>
+
+<div class="row m-3">
+	<div class="col">
+    <h3 *ngIf="!showDoughnut">Pie Chart</h3>
+		<h3 *ngIf="showDoughnut">Doughnut Chart</h3>
+		<div>
+        <ngx-charts-pie-chart
+          [view]="view"
+          [results]="single"
+          [labels]="hideLabel"
+          [legend]="true"
+          [explodeSlices]="explodeSlices"
+          [labels]="false"
+          [doughnut]="showDoughnut">
+        </ngx-charts-pie-chart>
+		</div>
+	</div>
+</div>
