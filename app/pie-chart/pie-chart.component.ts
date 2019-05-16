@@ -11,6 +11,7 @@ export class PieChartComponent implements OnInit {
   single: any[];
   multi: any[];
   view: any[] = [700, 400];
+  arcWidth: number = 0.25;
   explodeSlices: boolean = false;
   showDoughnut: boolean = false;
 
