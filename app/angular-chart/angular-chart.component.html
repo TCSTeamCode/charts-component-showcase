@@ -1,0 +1,21 @@
+<div class="row m-3">
+	<div class="col">
+		<h3>Angular Charts</h3>
+		<div>
+      <ngx-charts-gauge
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="single"
+          [min]="0"
+          [max]="100"
+          [legend]="true"
+          [angleSpan]="240"
+          [startAngle]="-120"
+          [units]="'population'"
+          [bigSegments]="10"
+          [smallSegments]="5"
+          (select)="onSelect($event)">
+      </ngx-charts-gauge>
+		</div>
+	</div>
+</div>
